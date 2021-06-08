@@ -1,0 +1,830 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+body::-webkit-scrollbar{
+    width: 7px;
+    background:  transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background: #1E6091;
+    border-radius: 80px;
+}
+body{
+    background: #edf6f9;
+}
+
+
+
+
+/* Barra de Navegacion  */
+
+.bx-menu {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+}
+
+.navbar{
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1E6091;
+    width: 100%;
+    animation: moverIzquierda 0.5s ease-in;
+}
+
+.logo{
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Righteous';
+    display: inline-block;
+}
+
+.nav-li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 13px;
+    transition: .5s;
+    margin: 0;
+}
+
+.nav-li a:hover{
+    background-color: #1A759F;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.74);
+}
+
+
+
+/* Navbar subList */
+
+.sub-list{
+    position: absolute;
+    background: #1E6091;
+    list-style: none;
+    width: 110%;
+    min-height: 110%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+    margin-top: 10px;
+}
+.sub-info{
+    width: 190%;
+}
+.sub-list li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.navbar li:hover .sub-list{
+    visibility: visible;
+    opacity: 1;
+    animation: moverArriba 0.4s ease-in-out;
+}
+
+
+
+/* Imagen Titular */
+
+.img-contenedor{
+    background: #edf6f9;
+}
+
+
+.img-contenedor img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Informacion Principal */
+
+.consultas{
+    margin: 0;
+    background: #edf6f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-bottom: 2px solid rgba(167, 167, 167, 0.521);
+    color: black;
+}
+
+.contenedor{
+    background:#edf6f9;
+    width: 100%;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+h1{
+    font-size: 60px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(167, 167, 167, 0.521);
+}
+h2 {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+
+
+/* Inicio */
+
+.cursando{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto ;
+    width: 80%;
+    height: 200px;
+    font-size: 20px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .4);
+}
+.cursos{
+    margin-top: 20px;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursos li {
+    display: inline-block;
+    font-size: 25px;
+    animation: moverAbajo 0s ease-in;
+}
+
+.cursos a {
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #1A759F;
+    transition: .5s;
+    padding: 13px 25px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+}
+.cursos a:hover{
+    letter-spacing: 2px;
+    font-size: 30px;
+    background-color: #1A659F;
+}
+
+
+
+/* Video */
+
+.multimedia{
+    animation: moverDerecha 0.5s ease-in;
+    min-height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.multimedia img {
+    width: 50%;
+    min-height: 100%;
+}
+
+
+
+/* Pie de Pagina */
+
+footer{
+    animation: moverIzquierda 0.5s ease-in;
+    background: #1E6091;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: white;
+}
+
+.footer-logo{
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Righteous';
+
+}
+
+.info-footer{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.info-footer p {
+    margin-top: 10px;
+}
+
+.contactanos ul {
+    list-style: none;
+}
+.redes {
+    display: flex;
+    margin: 0px 5px;
+    font-size: 21px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.bx {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.creditos{
+    color: #7096d4;
+}
+
+
+
+/* Informacion de Materias y Profesores */
+
+.grid-flex{
+    min-width: 100%;
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: #e0fbfc;
+    min-width: 50%;
+    min-height: 500px;
+    font-size: 20px;
+}
+
+.grid-container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 12px;
+    border-left: 1px solid black;
+}
+
+.grid-p a{
+    text-decoration: none;
+    color: black;
+}
+
+.grid-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid black;
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid black;
+    transition: .4s;
+}
+.grid-p:hover{
+    background: #439be2;
+    font-size: 21px;
+}
+.año {
+    border-bottom: 1px solid black ;
+}
+
+
+/* Key Frames */
+
+@keyframes moverDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moverIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moverAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moverArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media (max-width: 1320px) {
+    
+.grid-flex{
+    min-width: 90%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    min-width: 50%;
+    min-height: 500px;
+    font-size: 20px;
+}
+
+.grid-container h3 {
+    font-size: 20px;
+    padding: 12px;
+}
+
+.grid-p {
+    font-size: 15px;
+    width: 100%;
+    padding: 15px;
+}
+.grid-p:hover{
+    font-size: 16px;
+}
+}
+
+
+@media (max-width: 1100px) {
+    /* Nav Bar */
+    .nav-link{
+        font-size: 18px;
+        padding: 12px;
+    }
+    .sub-list{
+        font-size: 15px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    /* Consultas */
+    .consultas{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    h1{
+        font-size: 50px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(167, 167, 167, 0.521);
+    }
+    h2 {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    /* Cursos */
+    .cursos li{
+        font-size: 18px;
+    }
+    .cursos a:hover{
+        letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    /* Footer */
+    .footer-logo{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .info-footer{
+        font-size: 17px;
+    }
+    .redes {
+        margin: 0px 3px;
+        font-size: 18px;
+    }
+    .creditos{
+        font-size: 13px;
+    }
+
+    .grid-flex{
+        min-width: 90%;
+        min-height: 100vh;
+    }
+    
+    .grid-container{
+        min-width: 50%;
+        min-height: 500px;
+        font-size: 18px;
+    }
+    
+    .grid-container h3 {
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .grid-p {
+        font-size: 13px;
+        padding: 13px;
+    }
+    .grid-p:hover{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+@media (max-width: 900px) {
+    /* Nav Bar */
+    #enlaces{
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        height: 100vh;
+        left: 0;
+        flex-direction: column;
+        background-color: #1E6091;
+        transition: all 1s ease;
+        overflow: hidden;
+    }
+    #enlaces:hover{
+        border-bottom: 0px;
+        background-color: #1E6091;
+    }
+    #menuIcono {
+        animation: moverIzquierda 1s ease-in;
+        z-index: 100;
+        visibility: visible;
+        opacity: 1;
+        font-size: 32px;
+        top: 5px;
+        left: 20px;
+        cursor: pointer;
+    }
+    .uno{        
+        clip-path: circle(0.8% at 0 0);
+    }
+    .dos{
+        clip-path: circle(300% at 0 0);
+    }
+    .nav-link{
+        font-size: 18px;
+        padding: 12px;
+    }
+    .sub-list{
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        height: 100vh;
+        left: 50%;
+        flex-direction: column;
+        background-color: #1E6091;
+        transition: all 0.2s ease;
+        z-index: 2;
+    }
+    .sub-item{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        visibility: hidden;
+    }
+
+    /* Consultas */
+    .consultas{
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    h1{
+        font-size: 40px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(167, 167, 167, 0.521);
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .contenedor{
+        min-height: 90vh;
+    }
+
+    /* Cursos */
+    .cursos li{
+        font-size: 18px;
+    }
+    .cursos a:hover{
+        letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    /* Multimedia */
+    .multimedia{
+        height: 100%;
+    }
+    .video{
+        height: 40%;
+        width: 40%;
+    }
+
+    /* Footer */
+    .footer-logo{
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+    
+    .info-footer{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .redes {
+        margin: 0px 3px;
+        font-size: 15px;
+    }
+    .creditos{
+        font-size: 10px;
+    }
+    
+    .grid-flex{
+        min-width: 100%;
+        min-height: 90vh;
+    }
+    
+    .grid-container{
+        min-width: 50%;
+        min-height: 100%;
+        font-size: 18px;
+    }
+    
+    .grid-container h3 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .grid-p {
+        overflow: hidden;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 8px;
+    }
+    .grid-p:hover{
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+@media (max-width: 700px) {
+    .evidencia {
+        display: flex;
+        left: 20%;
+    }
+    .img-contenedor img {
+        margin-top: 20px ;
+    }
+
+    /* Consultas */
+    .consultas{
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 30px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(167, 167, 167, 0.521);
+    }
+    h2 {
+        margin-top: 15px;
+        font-size: 16px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .cursando{
+        font-size: 15px;
+    }
+
+    /* Cursos */
+    .cursos li{
+        font-size: 13px;
+        margin:0;
+        display: flex;
+    }
+
+    .cursos a:hover{
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+
+    /* Multimedia */
+    .multimedia{
+        display: flex;
+        flex-direction: column;
+    }
+    .multimedia img {
+        height: 200px;
+        width: 90%;
+    }
+    .video{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 90%;
+        min-height: 200px;
+    }
+
+
+    /* Footer */
+
+    footer{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-logo{
+        margin-top: 10px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .info-footer{
+        font-size: 15px;
+    }
+    .contactanos ul {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        font-size: 15px;
+    }
+    .redes{
+        margin: 0px 10px;
+    }
+    .creditos{
+        font-size: 0px;
+    }
+    .grid-flex{
+        width: 100%;
+        min-height: 90vh;
+    }
+    
+    .grid-container{
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 18px;
+    }
+    
+    .grid-container h3 {
+        font-size: 14px;
+        padding: 3px;
+    }
+    
+    .grid-p {
+        overflow: hidden;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 2px 3px;
+    }
+    .grid-p:hover{
+        font-size: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+        /* Nav Bar */
+        #enlaces{
+            width: 50%;
+            height: 80%;
+
+        }
+        .nav-link{
+            font-size: 13px;
+            padding: 0px;
+        }
+
+        .sub-item{
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+        }
+    .evidencia {
+        display: flex;
+        left: 20%;
+    }
+    .img-contenedor img {
+        margin-top: 20px ;
+    }
+
+    /* Consultas */
+    .consultas{
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(167, 167, 167, 0.521);
+    }
+    h2 {
+        margin-top: 15px;
+        font-size: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .cursando{
+        font-size: 15px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+    /* Cursos */
+    .cursos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cursos li {
+        margin-top: 10px;
+    }
+
+    /* Multimedia */
+
+    .multimedia img {
+        height: 150px;
+        width: 70%;
+    }
+    .video{
+        width: 70%;
+        min-height: 150px;
+    }
+    .info-footer{
+        font-size: 13px;
+    }
+}
